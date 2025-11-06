@@ -1,0 +1,226 @@
+/* Make body a flex container to center everything */
+body {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  min-height: 100vh;         /* full viewport height */
+  margin: 0;
+  background: #f0f2f5;       /* light gray background */
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.travel-container {
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+.travel-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.travel-container h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #34495e;
+  text-align: center;
+}
+
+/* Form grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #2c3e50;   /* dark background */
+  color: #ffffff;        /* white text */
+}
+
+.form-grid input::placeholder {
+  color: #cccccc;        /* lighter placeholder */
+}
+
+/* Buttons */
+.btn-group {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn-blue {
+  background: #3498db;
+  color: white;
+}
+.btn-blue:hover {
+  background: #2980b9;
+}
+
+.btn-green {
+  background: #2ecc71;
+  color: white;
+}
+.btn-green:hover {
+  background: #27ae60;
+}
+
+.btn-red {
+  background: #e74c3c;
+  color: white;
+}
+.btn-red:hover {
+  background: #c0392b;
+}
+
+.btn-gray {
+  background: #95a5a6;
+  color: white;
+}
+.btn-gray:hover {
+  background: #7f8c8d;
+}
+
+/* Messages */
+.message-banner {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+.message-banner.success {
+  background: #dff0d8;
+  color: #3c763d;
+}
+.message-banner.error {
+  background: #f2dede;
+  color: #a94442;
+}
+/* Fetch section wrapper */
+.fetch-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center heading + fetch section + results */
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Input + button row */
+.fetch-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.fetch-section input {
+  width: 150px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #2c3e50;
+  color: white;
+  text-align: center;  /* center input text too */
+}
+
+/* JSON preview when fetching */
+pre {
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 6px;
+  color: #000000;
+  font-size: 13px;
+  overflow-x: auto;
+  max-width: 600px;
+  margin: 10px auto;
+  text-align: left; /* keep JSON readable */
+}
+
+/* Table */
+.table-wrapper {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  margin-top: 15px;
+}
+
+table {
+  width: 80%;              /* shrink table */
+  max-width: 700px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  color: #000000;          /* black text */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background: #f4f6f7;
+  color: #2c3e50;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Action buttons inside table */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+/* JSON preview when fetching */
+pre {
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 6px;
+  color: #000000;   /* black text */
+  font-size: 13px;
+  overflow-x: auto;
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+/* Responsive form for mobile */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* stack inputs in 1 column */
+  }
+
+  table {
+    width: 100%;
+  }
+}
