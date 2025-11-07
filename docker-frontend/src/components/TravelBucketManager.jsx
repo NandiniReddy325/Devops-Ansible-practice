@@ -17,7 +17,8 @@ const TravelBucketManager = () => {
   const [editMode, setEditMode] = useState(false);
 
   // ✅ Using Vite environment variable
-  const baseUrl = import.meta.env.VITE_API_URL;
+  // const baseUrl = import.meta.env.VITE_API_URL;
+  const baseUrl = `${import.meta.env.VITE_API_URL}/travelapi`;
 
   useEffect(() => {
     fetchAllPlaces();
